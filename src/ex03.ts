@@ -3,10 +3,14 @@
 // If two numbers are passed, return their sum.
 // If two strings are passed, return their concatenated (combined) value.
 
-function combine(a, b);
-function combine(a, b);
-function combine(a, b) {
-  
+function combine(a: string, b: string): string;
+function combine(a: number, b:number): number;
+function combine(a: any, b: any): any {
+    if(typeof a === "string" && typeof b === "string"){
+        return a + b
+    }else{
+        return a + b
+    }
 }
 
 console.log(combine(10, 20));      // Expected output: 30
